@@ -10,9 +10,9 @@ Make sure you have composer.
 then: `composer install`
 
 To create a short url just query like this :
+`http://127.0.0.1:8000/?id=MYURL`
 
 This will generate a short url for you and return a json response
-`http://127.0.0.1:8000/?uri=MYURL`
 
 ```
 {

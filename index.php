@@ -1,11 +1,28 @@
 <?php
+use Phroute\Phroute\RouteCollector;
 
 require(__DIR__ . '/config.php');
+require(__DIR__ . '/./vendor/autoload.php');
 
-if (preg_match('#'.$service_URI.'\/(\/w*)/#i', $_SERVER['REDIRECT_URL'], $file)) {
-  header("Status: 200 OK", false, 200);
+$router = new RouteCollector();
 
-  require(__DIR__ . '/shorts/' . $file . '.php');
-} else {
-  echo 'Sorry, an error occured.';
-}
+$router->get('/{id}', function($id){
+    $shorts_path = __DIR__ . '/shorts/' . $id . '.php';
+    if (file_exists($shorts_path)) {
+        header("Status: 200 OK", false, 200);
+        require($shorts_path);
+        die();
+    } else {
+        echo "Le shortcut $id n'existe pas.";
+    }
+});
+
+$router->any('/', function(){
+    return 'Hello :) ';
+});
+
+$dispatcher = new Phroute\Phroute\Dispatcher($router->getData());
+
+$response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+echo $response;

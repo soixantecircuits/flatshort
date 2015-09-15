@@ -23,9 +23,3 @@ This will generate a short url for you and return a json response
 If you want to specify your short id simply run it like this :
 
 `http://127.0.0.1:8000/?uri=MYURL&shortid=MYSHORT`
-
-## Todo
-
-Namespaceit : `http://127.0.0.1:8000/disney/kpoask
-Add a .htaccess file to remove `.php` extension
-

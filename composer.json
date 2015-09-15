@@ -2,6 +2,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require":{
-    "crisu83/shortid": "*"
+    "crisu83/shortid": "*",
+    "phroute/phroute": "dev-master"
   }
 }

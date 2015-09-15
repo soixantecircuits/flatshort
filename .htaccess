@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^cut\/(/w*)$ /shorten.php\/?id=$1
+RewriteRule ^(/w*)$ /\/shorts\/$1.php

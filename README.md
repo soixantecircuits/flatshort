@@ -46,5 +46,7 @@ If the router does not work on your server, you can `mv .htaccess.sample .htacce
 ## TODO:
 
 [] Nice 404
+
 [] Nice index.php describing the service
+
 [] Nice regex in htaccess and router to handle complex urls

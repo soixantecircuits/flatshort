@@ -17,7 +17,11 @@ $router->get('/{id}', function($id){
     }
 });
 
-$router->get('/cut/{id}', function($uri){
+$router->get('/cut/{url}', function($uri){
+  require(__DIR__ . '/shorten.php');
+});
+
+$router->get('/cut/{url}/{shortid}', function($uri, $short_id){
   require(__DIR__ . '/shorten.php');
 });
 

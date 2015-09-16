@@ -10,7 +10,7 @@ Make sure you have composer.
 then: `composer install`
 
 To create a short url just query like this :
-`http://127.0.0.1:8000/?id=MYURL`
+`http://127.0.0.1:8000/cut/yourURLid`
 
 This will generate a short url for you and return a json response
 
@@ -22,4 +22,4 @@ This will generate a short url for you and return a json response
 
 If you want to specify your short id simply run it like this :
 
-`http://127.0.0.1:8000/?uri=MYURL&shortid=MYSHORT`
+`http://127.0.0.1:8000/cut/myURL/myShortID`

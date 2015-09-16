@@ -7,7 +7,7 @@ $shortid = ShortId::create();
 
 if(isset ( $_GET['shortid'] ) ){
   $short_id = $_GET['shortid'];
-} else {
+} else if (!isset($short_id)) {
   $short_id = $shortid->generate();
 }
 

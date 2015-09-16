@@ -23,3 +23,9 @@ This will generate a short url for you and return a json response
 If you want to specify your short id simply run it like this :
 
 `http://127.0.0.1:8000/cut/myURL/myShortID`
+
+To access your long links, just go to:
+
+`http://127.0.0.1:8000/shortID`
+
+With `shortID` being the `short` field in the json response.

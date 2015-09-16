@@ -42,3 +42,9 @@ With `shortID` being the `short` field in the json response.
 ## Troublepwing
 
 If the router does not work on your server, you can `mv .htaccess.sample .htaccess` and it should do what is intended (if you serve flatshort with Apache).
+
+## TODO:
+
+[] Nice 404
+[] Nice index.php describing the service
+[] Nice regex in htaccess and router to handle complex urls

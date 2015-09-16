@@ -17,6 +17,10 @@ $router->get('/{id}', function($id){
     }
 });
 
+$router->get('/cut/{id}', function($uri){
+  require(__DIR__ . '/shorten.php');
+});
+
 $router->any('/', function(){
     return 'Hello :) ';
 });

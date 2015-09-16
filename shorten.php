@@ -21,7 +21,7 @@ if(isset ( $_GET['uri'] ) && !empty($_GET['uri']) || isset($uri) ){
     echo json_encode(array('error'=> 'this shorts is already taken.'));
   } else {
     $shorts = fopen($short_path, "w") or die("Unable to open file!");
-    $file_content = '<?php header("Location: ' . $redirect_URI .$uri.'");?>';
+    $file_content = '<?php header("Location: '.$uri.'");?>';
     fwrite($shorts, $file_content);
     fclose($shorts);
     header('HTTP/1.1 200 OK');

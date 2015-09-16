@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^index\.php$ index.php [L,NC]
+RewriteRule ^([a-z0-9\-\.]+)$ /shorts/$1.php [L,NC]
+RewriteRule ^cut\/(http\:\/\/)?([a-zA-Z0-9+_\-\.]+\.[a-zA-Z]{2,3})$ /shorten.php/?uri=http://$2 [L,NC]
+RewriteRule ^cut\/(http\:\/\/)?([a-zA-Z0-9+_\-\.]+\.[a-zA-Z]{2,3})\/([a-z0-9\-\.]+)$ /shorten.php/?uri=http://$2&shortid=$3 [L,NC]
